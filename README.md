@@ -1,33 +1,14 @@
 # Cattle-vocal-classification-model
-# Audio Preprocessing and Visualization
+# Cattle Vocalization Classification
 
-This repository contains a Jupyter notebook for preprocessing audio files by reducing noise and visualizing the results through spectrograms and waveforms.
+## Abstract
 
-## Features
+This project aims to classify cattle vocalizations into four distinct categories—cough sound, estrus call, food anticipating call, and normal call—using advanced deep learning techniques. Audio samples were collected from Korean native cattle, encompassing a range of ages and physiological states, and preprocessed to enhance the signal quality by reducing noise. These preprocessed audio files were then converted into Mel Frequency Cepstral Coefficient (MFCC) images, which serve as inputs to various deep learning models, including CNN, VGG16, ResNet50, EfficientNet, InceptionV3, and Vision Transformer. Each model was trained to identify and classify the MFCC images accurately. The performance of these models was evaluated to determine their efficacy in recognizing and categorizing cattle sounds, with results showing significant potential for automated monitoring and management of livestock vocalization patterns.
 
-1. **Noise Reduction**: Cleans audio files using the `noisereduce` library.
-2. **Visualization**: Generates and displays spectrograms and waveforms for raw and preprocessed audio.
-3. **File Management**: Organizes audio files into categories and counts files in each category.
+## Introduction
 
-## Usage
+The advent of artificial intelligence (AI) in agricultural practices heralds a new era of precision livestock farming, offering innovative solutions for enhanced animal welfare and farm management. This project introduces a cutting-edge web application that utilizes deep learning techniques to analyze cattle sounds, providing a non-invasive tool for monitoring the health and behavior of livestock. The application’s core lies in its ability to process and classify various cattle vocalizations—such as normal calls, estrus calls, food anticipating calls, and cough sounds—through a user-friendly web interface. This enables farmers and cattle owners to gain insights into the well-being of their animals without direct physical interaction, thereby reducing stress on the animals and increasing the efficiency of farm operations.
 
-1. **Setup**:
-   - Install required libraries:
-     ```bash
-     pip install librosa noisereduce soundfile matplotlib numpy
-     ```
-   - Ensure your directory structure matches the expected input and output paths.
+At the heart of the system is a convolutional neural network (CNN), a class of deep neural networks renowned for their prowess in analyzing visual imagery, which has been adeptly applied to the auditory domain for this project. The CNN is trained on a dataset of labeled cattle sounds, learning to identify patterns and features that distinguish between different types of calls. This training process involves a sophisticated audio preprocessing pipeline that enhances the quality of the recordings, followed by the extraction of Mel-frequency cepstral coefficients (MFCCs)—a representation of the short-term power spectrum of sound. These steps ensure that the model focuses on the most informative aspects of the audio, leading to accurate and reliable classification.
 
-2. **Running the Notebook**:
-   - Preprocess audio files by loading, cleaning, and saving them.
-   - Visualize audio data by plotting spectrograms and waveforms.
-   - Count the number of files in each category.
-
-3. **Example**:
-   ```python
-   # Example paths
-   raw_audio_path = 'path/to/raw_audio.wav'
-   preprocessed_audio_path = 'path/to/preprocessed_audio_clean.wav'
-
-   # Plot spectrograms and waveforms
-   plot_spectrograms_and_waveforms(raw_audio_path, preprocessed_audio_path)
+The motivation for this project stems from the growing need for sustainable and humane livestock management practices. Traditional monitoring methods often require continuous human presence and can be intrusive, potentially causing distress to the animals. By leveraging the natural vocalizations of cattle as indicators of their health and emotional state, this application offers a non-intrusive alternative that can significantly improve the quality of life for the animals while providing farmers with critical information to aid in decision-making. This project not only demonstrates the practical application of AI in agriculture but also contributes to the ongoing discourse on the role of technology in enhancing animal welfare. By providing a tool that simplifies the monitoring of livestock health and behavior, it opens up new possibilities for precision farming and represents a step forward in the humane treatment of farm animals. Through the detailed analysis of cattle sounds, farmers can detect potential health issues early, monitor the reproductive status of their herd, and ensure that their animals are in optimal condition, thereby increasing productivity and sustainability in the agricultural sector.
