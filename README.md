@@ -1,5 +1,4 @@
 # Cattle-vocal-classification-model
-# Cattle Vocalization Classification
 
 ## Abstract
 
